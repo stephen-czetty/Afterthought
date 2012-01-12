@@ -132,6 +132,11 @@ namespace Afterthought.UnitTest.Target
 							((int[])parameters[0])[i] = ((int[])parameters[0])[i - 1] + ((int[])parameters[0])[i];
 					});
 
+            Methods
+                .Named("GetCalculator")
+                .Before((instance, methodName, parameters)
+					=> { var s = new Stopwatch(); });
+
 			#endregion
 
 			#region Properties

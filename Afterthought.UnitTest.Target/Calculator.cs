@@ -234,6 +234,11 @@ namespace Afterthought.UnitTest.Target
 			}
 		}
 
+        public void GetCalculator(ref Calculator calculator)
+        {
+            calculator = new Calculator();
+        }
+
 		public event EventHandler Calculate;
 	}
 }
